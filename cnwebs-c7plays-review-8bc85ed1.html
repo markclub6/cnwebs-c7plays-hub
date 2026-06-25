@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简明指南 · c7娱乐 产品说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fdfdf5;
+      font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Times New Roman', serif;
+      color: #2f2e2a;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 780px;
+      width: 100%;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+      padding: 2.8rem 2rem 3.2rem;
+      transition: box-shadow 0.2s;
+    }
+
+    @media (max-width: 540px) {
+      body {
+        padding: 0.8rem 0.6rem;
+      }
+
+      .page {
+        padding: 1.8rem 1.2rem 2.4rem;
+        border-radius: 16px;
+      }
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.2rem;
+      border-left: 6px solid #b8a28b;
+      padding-left: 1.2rem;
+      color: #3d3a33;
+    }
+
+    .subhead {
+      font-size: 0.95rem;
+      color: #7a756a;
+      margin-top: -0.2rem;
+      margin-bottom: 2.2rem;
+      padding-left: 1.8rem;
+      border-bottom: 1px dashed #e2dbd1;
+      padding-bottom: 0.8rem;
+    }
+
+    .summary-card {
+      background: #f8f5ef;
+      border-radius: 16px;
+      padding: 1.6rem 1.8rem;
+      margin: 1.8rem 0 2rem;
+      border: 1px solid #ece4d9;
+    }
+
+    .summary-card p {
+      font-size: 1.05rem;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 2rem 0 1.8rem;
+    }
+
+    .highlight-item {
+      background: #fcfaf6;
+      border-radius: 14px;
+      padding: 1.2rem 1.2rem 1rem;
+      border: 1px solid #efe7dd;
+      transition: background 0.15s;
+    }
+
+    .highlight-item:hover {
+      background: #f7f2ea;
+    }
+
+    .highlight-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #4f4a40;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.3px;
+    }
+
+    .highlight-item p {
+      font-size: 0.95rem;
+      color: #5b564b;
+    }
+
+    @media (max-width: 480px) {
+      .highlight-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .quote-block {
+      background: #f2ede6;
+      border-left: 6px solid #b8a28b;
+      padding: 1.2rem 1.6rem;
+      margin: 2rem 0 1.8rem;
+      border-radius: 0 12px 12px 0;
+      color: #3f3b33;
+      font-style: normal;
+    }
+
+    .quote-block p {
+      margin-bottom: 0.4rem;
+    }
+
+    .quote-block .source {
+      font-size: 0.9rem;
+      color: #756f62;
+      margin-top: 0.4rem;
+      display: block;
+      font-style: normal;
+    }
+
+    .faq-mini {
+      margin: 2.2rem 0 1.8rem;
+      border-top: 1px solid #e5ddd2;
+      padding-top: 1.6rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 500;
+      color: #3d3930;
+      margin-bottom: 0.2rem;
+      font-size: 1rem;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #5b564b;
+      padding-left: 0.4rem;
+    }
+
+    .access-note {
+      background: #fffaf2;
+      border: 1px solid #dcd3c6;
+      border-radius: 14px;
+      padding: 1.4rem 1.6rem;
+      margin: 2rem 0 0.6rem;
+      font-size: 0.95rem;
+      color: #4e4940;
+    }
+
+    .access-note strong {
+      color: #3d372e;
+    }
+
+    .inline-link {
+      color: #7a6b59;
+      text-decoration: none;
+      border-bottom: 1px solid #cbbfb1;
+      transition: border-color 0.15s, color 0.15s;
+      font-weight: 400;
+    }
+
+    .inline-link:hover {
+      color: #4f463b;
+      border-bottom-color: #7a6b59;
+    }
+
+    .footer-note {
+      margin-top: 2.4rem;
+      border-top: 1px solid #ece4d9;
+      padding-top: 1.4rem;
+      font-size: 0.85rem;
+      color: #8a8478;
+      text-align: center;
+      letter-spacing: 0.4px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e8dfd4;
+      margin: 1.2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>产品说明 · 简明指南</h1>
+    <div class="subhead">一份关于 <a href="https://cnwebs-c7plays.com" class="inline-link">c7娱乐</a> 的克制叙述与实用提醒</div>
+
+    <!-- 摘要区 -->
+    <div class="summary-card">
+      <p>如果你正在了解 <strong><a href="https://cnwebs-c7plays.com" class="inline-link">c7娱乐</a></strong> 这个平台，不妨先花几分钟阅读下面这份摘要。我们尽量用平实的语言说明它的主要特点、适用场景以及访问时需要注意的细节。不夸大，不渲染，只陈述事实和合理的建议。</p>
+    </div>
+
+    <!-- 亮点网格 -->
+    <h2 style="font-weight: 400; font-size: 1.25rem; margin: 0.2rem 0 0.6rem; color: #4e4940;">▎ 几个值得留意的特点</h2>
+    <div class="highlight-grid">
+      <div class="highlight-item">
+        <h3>内容整合度</h3>
+        <p>平台将常见娱乐信息做了分类整理，省去在多个页面间跳转的麻烦，浏览结构相对清晰。</p>
+      </div>
+      <div class="highlight-item">
+        <h3>界面风格</h3>
+        <p>整体配色偏沉稳，导航逻辑不复杂，初次使用也能较快找到目标模块，没有过度堆砌。</p>
+      </div>
+      <div class="highlight-item">
+        <h3>响应速度</h3>
+        <p>在常规网络下页面加载流畅，交互反馈及时，没有明显的卡顿或延迟感。</p>
+      </div>
+      <div class="highlight-item">
+        <h3>更新节奏</h3>
+        <p>内容保持一定的更新频率，信息时效性处于可接受范围，不过分陈旧。</p>
+      </div>
+    </div>
+
+    <!-- 引用 / 使用建议 -->
+    <div class="quote-block">
+      <p>「与其把时间花在反复比较不同平台，不如选一个界面合意、更新稳定的，然后熟悉它的脉络。频繁切换反而容易丢失焦点。」</p>
+      <span class="source">—— 来自一位长期用户的简短分享</span>
+    </div>
+
+    <!-- 使用建议 -->
+    <h2 style="font-weight: 400; font-size: 1.2rem; margin: 0.8rem 0 0.4rem; color: #4e4940;">▎ 使用建议与场景</h2>
+    <p style="margin-bottom: 1.2rem; color: #4f4a40;">如果你属于以下情形之一，<a href="https://cnwebs-c7plays.com" class="inline-link">c7娱乐</a> 可能值得一试：</p>
+    <ul style="list-style: none; padding-left: 0.2rem; margin-bottom: 1.6rem;">
+      <li style="margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative;">· 需要在一个界面里快速浏览多种分类信息，而不想打开太多标签页。</li>
+      <li style="margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative;">· 偏好视觉干净、没有过多弹窗和广告干扰的页面环境。</li>
+      <li style="margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative;">· 希望内容更新有基本规律，而不是几个月没有变化的信息孤岛。</li>
+      <li style="margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative;">· 偶尔浏览，不追求全天候在线或即时推送，更倾向于自主选择查看时机。</li>
+    </ul>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-mini">
+      <h2 style="font-weight: 400; font-size: 1.2rem; margin-bottom: 0.8rem; color: #4e4940;">▎ 常见疑问摘要</h2>
+      <div class="faq-item">
+        <strong>Q：是否需要注册才能使用全部功能？</strong>
+        <p>部分内容无需登录即可浏览，但某些个性化功能（如收藏、历史记录）可能需要一个简单账号。建议先以访客身份体验，再决定是否有注册必要。</p>
+      </div>
+      <div class="faq-item">
+        <strong>Q：移动端适配做得如何？</strong>
+        <p>页面在手机浏览器上显示正常，按钮和链接间距合理，没有重叠或字体过小的问题。不过部分复杂页面建议在横屏或平板模式下查看，体验更佳。</p>
+      </div>
+      <div class="faq-item">
+        <strong>Q：是否有必要频繁刷新？</strong>
+        <p>不需要刻意定时刷新。平台内容更新后会自然出现在信息流中，按自己的节奏访问即可。</p>
+      </div>
+    </div>
+
+    <!-- 可信但克制的访问说明 -->
+    <div class="access-note">
+      <strong>📌 访问提醒 · 请理性看待</strong>
+      <p style="margin-top: 0.4rem;">任何在线平台都存在一定的不确定性，<a href="https://cnwebs-c7plays.com" class="inline-link">c7娱乐</a> 也不例外。我们建议你在使用前注意以下几点：</p>
+      <ul style="margin-top: 0.6rem; padding-left: 1.4rem; color: #4e4940;">
+        <li style="margin-bottom: 0.3rem;">了解平台的基本规则和服务条款，不清楚的地方先确认。</li>
+        <li style="margin-bottom: 0.3rem;">不要一次性透露过多的个人敏感信息。</li>
+        <li style="margin-bottom: 0.3rem;">适当控制在线时长，保持浏览与休息的平衡。</li>
+        <li style="margin-bottom: 0.3rem;">如果遇到异常弹窗或诱导链接，及时退出并检查网络环境。</li>
+      </ul>
+      <p style="margin-top: 0.6rem; font-size: 0.9rem;">以上提醒并非针对特定平台，而是适用于所有同类网站。保持警觉，合理使用，才能获得更平稳的体验。</p>
+    </div>
+
+    <!-- 结束语 -->
+    <div class="footer-note">
+      <span>一份产品说明 · 不构成投资或使用建议 · 请根据自身情况判断</span><br>
+      <span style="font-size: 0.8rem; color: #9e978b;">最后更新：近期 · 内容仅供参考</span>
+    </div>
+  </div>
+</body>
+</html>
